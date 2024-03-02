@@ -36,7 +36,7 @@ footer {
                 opacity: 1;
             }
 
-/* Sötét téma beállítása *//*
+/* Sötét téma beállítása */
 @media (prefers-color-scheme: dark) {
   body {
     color: white;
@@ -50,4 +50,4 @@ footer {
   }
   
 }
-*/
+
