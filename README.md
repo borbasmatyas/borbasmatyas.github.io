@@ -1,3 +1,8 @@
+
+[![Deploy static content to Pages](https://github.com/borbasmatyas/borbasmatyas.github.io/actions/workflows/static.yml/badge.svg)](https://github.com/borbasmatyas/borbasmatyas.github.io/actions/workflows/static.yml)
+
+---
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/borbasmatyas/borbasmatyas.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
