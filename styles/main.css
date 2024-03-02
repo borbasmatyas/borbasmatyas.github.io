@@ -14,6 +14,8 @@ body {
     color: white;
     background-color: black;
   }
+
+  
 }
 
 
@@ -37,7 +39,7 @@ footer {
             footer a {
                 display: flex;
                 align-items: center;
-                color: black;
+                color: inherit;
                 text-decoration: none;
                 opacity: 0.5;
             }
