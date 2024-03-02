@@ -8,18 +8,6 @@ body {
   background-color: white;
 }
 
-/* Sötét téma beállítása */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: white;
-    background-color: black;
-  }
-
-  
-}
-
-
-
 footer {
                 display: flex;
                 align-items: center;
@@ -39,7 +27,7 @@ footer {
             footer a {
                 display: flex;
                 align-items: center;
-                color: inherit;
+                color: black;
                 text-decoration: none;
                 opacity: 0.5;
             }
@@ -47,3 +35,16 @@ footer {
             footer a:hover {
                 opacity: 1;
             }
+
+/* Sötét téma beállítása */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background-color: black;
+  }
+  footer, a, p { color: white; }
+  svg.invert {
+    filter: invert(100%);
+  }
+  
+}
