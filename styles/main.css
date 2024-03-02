@@ -42,8 +42,10 @@ footer {
     color: white;
     background-color: black;
   }
+  
   footer, a, p { color: white; }
-  svg.invert {
+  
+  svg {
     filter: invert(100%);
   }
   
