@@ -6,8 +6,8 @@
   /* Színek: világos téma */
   --color-bg: #ffffff;
   --color-fg: #24292e;
-  --color-link: #0366d6;
-  --color-link-hover: #0056b3;
+  --color-link: #24292e;
+  --color-link-hover: #0366d6;
   --color-box-shadow: rgba(27, 31, 35, 0.15);
   --color-border: #e1e4e8;
 
@@ -15,8 +15,8 @@
   @media (prefers-color-scheme: dark) {
     --color-bg: #0d1117;
     --color-fg: #c9d1d9;
-    --color-link: #58a6ff;
-    --color-link-hover: #1f6feb;
+    --color-link: #c9d1d9;
+    --color-link-hover: #58a6ff;
     --color-box-shadow: rgba(255, 255, 255, 0.1);
     --color-border: #30363d;
   }
