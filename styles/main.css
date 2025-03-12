@@ -8,13 +8,17 @@
   --color-fg: black;
   --color-link: black;
   --color-link-hover: #333;
+  --color-box-shadow: rgba(0, 0, 0, 0.1);
+  --color-border: #ddd;
 
   /* Színek: sötét monokróm téma */
   @media (prefers-color-scheme: dark) {
-    --color-bg: black;
-    --color-fg: white;
-    --color-link: white;
-    --color-link-hover: #ccc;
+    --color-bg: #1e1e1e;
+    --color-fg: #cfcfcf;
+    --color-link: #9a9a9a;
+    --color-link-hover: #bfbfbf;
+    --color-box-shadow: rgba(255, 255, 255, 0.1);
+    --color-border: #444;
   }
 }
 
@@ -72,14 +76,12 @@ footer a:hover {
 }
 
 /* Repository kártyák stílusa */
-
-
 .repo-card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 16px;
   width: var(--card-width);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--color-box-shadow);
   background-color: var(--color-bg);
   color: var(--color-fg);
 }
