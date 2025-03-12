@@ -5,7 +5,7 @@ async function fetchRepositories() {
 
     const repoList = document.getElementById('repo-list');
     repos.forEach(repo => {
-        const card = document.createElement('div');
+        const card = document.createElement('li');
         card.className = 'repo-card';
 
         const repoName = document.createElement('h2');
