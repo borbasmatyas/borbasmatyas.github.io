@@ -1,53 +1,66 @@
 :root {
   font-family: monospace;
+  font-size: 16px;
+
+  /* Színek: világos monokróm téma */
+
+  --color-bg: white;
+  --color-fg: black;
+  --color-link: black;
+  --color-link-hover: #333;
+
+  /* Színek: sötét monokróm téma */
+  
+  @media (prefers-color-scheme: dark) {
+    --color-bg: black;
+    --color-fg: white;
+    --color-link: white;
+    --color-link-hover: #ccc;
+  }
+
 }
 
 body {
-  /* Alapértelmezett stílus */
-  color: black;
-  background-color: white;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  color: var(--color-fg);
+  background-color: var(--color-bg);
 }
 
 footer {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                margin-top: 20px;
-                margin-bottom: 3rem;
-                font-size: 1em;
-            }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 3rem;
+  font-size: 1em;
+}
 
-            footer svg {
-                margin-left: 10px;
-                margin-right: 5px;
-                opacity: 0.5;
-            }
+footer svg {
+  margin-left: 10px;
+  margin-right: 5px;
+  opacity: 0.5;
+}
 
-            footer a {
-                display: flex;
-                align-items: center;
-                color: black;
-                text-decoration: none;
-                opacity: 0.5;
-            }
+footer a {
+  display: flex;
+  align-items: center;
+  color: var(--color-link);
+  text-decoration: none;
+  opacity: 0.5;
+}
 
-            footer a:hover {
-                opacity: 1;
-            }
+footer a:hover {
+  opacity: 1;
+}
 
 /* Sötét téma beállítása */
 @media (prefers-color-scheme: dark) {
-  body {
-    color: white;
-    background-color: black;
-  }
-  
-  footer, a, p { color: white; }
-  
+
   svg {
     filter: invert(100%);
   }
-  
-}
 
+}
