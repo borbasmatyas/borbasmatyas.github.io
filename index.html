@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="noindex, nofollow, noarchive">
-		<link rel="stylesheet" href="/styles/main.css">
+   
 		<title>Matyi @ GitHub.io</title>
 		<meta name="description" content="Játszós oldal a GitHub-on">
 	</head>
@@ -13,10 +13,7 @@
 
 
 <body>
-    <header>
-        <h1>Matyi @ GitHub.io</h1>
-        <p>Játszós oldal a GitHub-on</p>
-    </header>
+
     
     <ul id="repo-list"></ul>
 
@@ -32,5 +29,12 @@
         </svg>
         <a href="https://github.com/borbasmatyas/borbasmatyas.github.io" target="_blank">/borbasmatyas.github.io</a>
     </footer>
+
+    <script>
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = `/styles/main.css?v=${new Date().getTime()}`;
+        document.head.appendChild(cssLink);
+    </script>
 </body>
 </html>
