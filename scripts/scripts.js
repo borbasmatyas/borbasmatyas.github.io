@@ -5,12 +5,26 @@ async function fetchRepositories() {
 
     const repoList = document.getElementById('repo-list');
     repos.forEach(repo => {
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = repo.html_url;
-        link.textContent = repo.name;
-        listItem.appendChild(link);
-        repoList.appendChild(listItem);
+        const card = document.createElement('div');
+        card.className = 'repo-card';
+
+        const repoName = document.createElement('h2');
+        repoName.textContent = repo.name;
+
+        const repoLink = document.createElement('a');
+        repoLink.href = repo.html_url;
+        repoLink.textContent = 'Repository Link';
+        repoLink.target = '_blank';
+
+        const pagesLink = document.createElement('a');
+        pagesLink.href = `https://${username}.github.io/${repo.name}`;
+        pagesLink.textContent = 'Pages Link';
+        pagesLink.target = '_blank';
+
+        card.appendChild(repoName);
+        card.appendChild(repoLink);
+        card.appendChild(pagesLink);
+        repoList.appendChild(card);
     });
 }
 
