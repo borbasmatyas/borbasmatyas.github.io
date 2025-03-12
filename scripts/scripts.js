@@ -1,5 +1,5 @@
 async function fetchRepositories() {
-    const username = 'borbasmatyas'; // Cseréld le a GitHub felhasználónevedre
+    const username = 'borbasmatyas'; 
     const response = await fetch(`https://api.github.com/users/${username}/repos`);
     const repos = await response.json();
 
@@ -13,12 +13,12 @@ async function fetchRepositories() {
 
         const repoLink = document.createElement('a');
         repoLink.href = repo.html_url;
-        repoLink.textContent = 'Repository Link';
+        repoLink.textContent = repoLink.href;
         repoLink.target = '_blank';
 
         const pagesLink = document.createElement('a');
         pagesLink.href = `https://${username}.github.io/${repo.name}`;
-        pagesLink.textContent = 'Pages Link';
+        pagesLink.textContent = pagesLink.href;
         pagesLink.target = '_blank';
 
         card.appendChild(repoName);
