@@ -3,18 +3,15 @@ async function fetchRepositories() {
     const response = await fetch(`https://api.github.com/users/${username}/repos`);
     const repos = await response.json();
 
-    // Kihagyjuk az username-val megegyező repository-t, ha van ilyen
-    const index = repos.findIndex(repo => repo.name === username);
-    if (index !== -1) {
-        repos.splice(index, 1);
-    }
+    // Csak azokat a repository-kat jelenítjük meg, amelyeknek van GitHub Pages oldala
+    const pagesRepos = repos.filter(repo => repo.has_pages && repo.name !== username);
 
     // Rendezzük a repository-kat név szerint
-    repos.sort((a, b) => a.name.localeCompare(b.name));
+    pagesRepos.sort((a, b) => a.name.localeCompare(b.name));
     
     // A rendezett repository-kat megjelenítjük a weboldalon
     const repoList = document.getElementById('repo-list');
-    repos.forEach(repo => {
+    pagesRepos.forEach(repo => {
 
         // A repository-t megjelenítő kártya létrehozása
         const card = document.createElement('li');
